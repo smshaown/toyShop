@@ -75,7 +75,7 @@ const Bookings = () => {
         <table className="table table-compact w-full">
           <thead className="text-center">
             <tr>
-              <th>#</th>
+             
               <th>Photo</th>
               <th>Seller Name</th>
               <th>Toy Name</th>
@@ -85,6 +85,8 @@ const Bookings = () => {
               <th>Rating</th>
               <th>description</th>
               <th>updated</th>
+               <th>delete</th>
+       
             </tr>
           </thead>
           <tbody className="text-center">

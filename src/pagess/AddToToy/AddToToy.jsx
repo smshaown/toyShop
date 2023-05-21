@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import Lottie from "lottie-react";
 import AnimationLottie from "../../assets/product.json";
 import { AuthContext } from "../../provider/AuthProvider";
-// import CreatableSelect from "react-select/creatable";
-// import { AuthContext } from "../../providers/AuthProvider";
+import swal from 'sweetalert';
 
 const AddToToy = () => {
   const { user } = useContext(AuthContext);
@@ -26,9 +25,12 @@ const AddToToy = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+         swal("success post!", "You clicked the button!", "success");
+
+      from.reset();
+      console.log(result);
       });
-    console.log(data);
+   
   };
 
 

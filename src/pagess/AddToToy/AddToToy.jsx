@@ -18,17 +18,15 @@ const AddToToy = () => {
   const onSubmit = (data) => {
     // data.skills = selectedOption;
 
-    fetch("http://localhost:5000/toyPost", {
+    fetch("http://localhost:5000/toys", {
       method: "POST",
       headers: { "Content-Type": "application/json" }, 
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((result) => {
-         swal("success post!", "You clicked the button!", "success");
-
-      from.reset();
-      console.log(result);
+         swal("success post!", "You clicked the button!", "success");     
+        console.log(result);
       });
    
   };

@@ -24,7 +24,7 @@ const UpdateToy = () => {
       description,
     };
     
-    fetch(`http://localhost:5000/UpdateToys/${_id}`, {
+    fetch(`http://localhost:5000/updateToys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -36,8 +36,8 @@ const UpdateToy = () => {
         console.log(data);
         if (data.modifiedCount > 0) {
           Swal.fire(
-            "Deleted!",                
-           "Your file has been deleted.",
+            "Update!",                
+           "Your file has been Updated.",
             "success"
             );
         }

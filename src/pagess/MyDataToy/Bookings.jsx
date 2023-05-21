@@ -21,7 +21,7 @@ const Bookings = () => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/myJobs/${user?.email}?sort=${sortValue}`
+          `http://localhost:5000/myToys/${user?.email}?sort=${sortValue}`
         );
         const data = await res.json();
         setNyDataToy(data);
@@ -40,7 +40,7 @@ const Bookings = () => {
   const handleDelete = (id) => {
     const proceed = confirm("Are You Sure you want to deleted");
     if (proceed) {
-      fetch(`http://localhost:5000/myJobs/${id}`, {
+      fetch(`http://localhost:5000/deleteToys/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

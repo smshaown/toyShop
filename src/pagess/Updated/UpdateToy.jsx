@@ -23,6 +23,8 @@ const UpdateToy = () => {
       quantity,
       description,
     };
+
+    updatedToy.price = parseFloat(updatedToy.price);
     
     fetch(`http://localhost:5000/updateToys/${_id}`, {
       method: "PUT",

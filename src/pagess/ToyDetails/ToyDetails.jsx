@@ -22,7 +22,7 @@ const ToyDetails = () => {
     <div> 
 
 
-      <div className="card card-side bg-base-100 shadow-xl w-[500px] mx-auto">
+      <div className="card card-side bg-base-100 shadow-xl w-[500px] mx-auto mt-8">
      <figure><img src={pictureUrl} className="h-72" alt="Movie"/></figure>
   <div className="card-body">
     <h2 className="card-title">Toy Name: {toyName}</h2>

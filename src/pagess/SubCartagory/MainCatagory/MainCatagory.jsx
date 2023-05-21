@@ -5,11 +5,14 @@ const MainCatagory = () => {
   const [allToys, setAllToy] = useState([]);
   const [activeTab, setActiveTab] = useState("sportsCar");
 
+  console.log(activeTab)
+
   useEffect(() => {
-    fetch(`http://localhost:5000/allToy/${activeTab}`)
+    fetch(`http://localhost:5000/catagory/${activeTab}`)
       .then((res) => res.json())
       .then((result) => {
         setAllToy(result);
+        console.log(result)
       });
   }, [activeTab]);
 

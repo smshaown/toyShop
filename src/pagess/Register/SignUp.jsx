@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Lottie from "lottie-react";
 import lottieAnimation from '../../assets/login.json'
 import { AuthContext } from '../../provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 
 const SignUp = () => {
@@ -52,7 +53,14 @@ const from = location.state?.from?.pathname || "/";
         .then(result => {
           const loggedUser = result.user;
           console.log(loggedUser);
-          updateUser(result.user, name, photo)
+          // updateUser(result.user, name, photo)
+          updateProfile(loggedUser, {
+            displayName: name, photoURL: photo
+          }) 
+          .then()
+          .catch(error => {
+            console.log(error)
+          })
           navigate(from, { replace: true });
           form.reset();
         })
@@ -62,16 +70,21 @@ const from = location.state?.from?.pathname || "/";
 
   }
 
-  const updateUser = (user, name, photo) => {
-      updateProfile(user, {
-          displayName: name,
-          photoURL: photo
-      })
-      .then(() => {})
-      .catch(error => {
-          console.error(error)
-      })
-  }
+
+  
+
+  
+
+  // const updateUser = (user, name, photo) => {
+  //     updateProfile(user, {
+  //         displayName: name,
+  //         photoURL: photo
+  //     })
+  //     .then(() => {})
+  //     .catch(error => {
+  //         console.error(error)
+  //     })
+  // }
 
 
 

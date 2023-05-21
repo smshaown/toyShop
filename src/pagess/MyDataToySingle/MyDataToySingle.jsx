@@ -34,10 +34,10 @@ const MyDataToySingle = ({ singleToy, handleDelete, handleJobUpdate }) => {
       <td>{quantity}</td>
       <td>{rating}</td>
       <td>{description}</td>
-      <td><Link to={`/updateToy/${_id}`} className="btn btn-secondary" >updated</Link></td>
+      <td><Link to={`/updateToy/${_id}`} className="btn btn-outline btn-secondary" >updated</Link></td>
       <td> <button
           onClick={() => handleDelete(_id)}
-          className="btn btn-secondary"
+          className="btn btn-outline btn-secondary"
         >
           delete
              </button></td>

@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 // import { Player } from "@lottiefiles/react-lottie-player";
 // import UpdateAnimation from "../../assets/update.json";
 // import useTitle from "../../useTitle";
@@ -35,7 +35,11 @@ const UpdateToy = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount > 0) {
-          alert('ok')
+          Swal.fire(
+            "Deleted!",                
+           "Your file has been deleted.",
+            "success"
+            );
         }
       });
   };

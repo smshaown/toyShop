@@ -16,7 +16,7 @@ const AllToys = () => {
 
 
   const handleSearch = () => {
-    fetch(`http://localhost:5000/allToysSearchByTitle/${searchText}`)
+    fetch(`http://localhost:5000/allToy/${searchText}`)
       .then((res) => res.json())
       .then((data) => {      
         setAllToys(data);

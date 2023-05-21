@@ -12,6 +12,7 @@ import Bookings from "../pagess/MyDataToy/Bookings";
 import SingleSubDetails from "../pagess/SingleSubDetails/SingleSubDetails";
 import UpdateToy from "../pagess/Updated/UpdateToy";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../pagess/Blog/Blog";
 
 
 
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
           path: '/updateToy/:id',
           element: <UpdateToy />,
           loader: ({params}) => fetch( `http://localhost:5000/UpdateToys/${params.id}` )
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
         }
       
       ]

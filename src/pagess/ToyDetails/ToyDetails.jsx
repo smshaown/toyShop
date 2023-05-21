@@ -11,10 +11,8 @@ const ToyDetails = () => {
     postedBy,
     price,
     rating,
-    subcategory,
     quantity,
     description,
-    email,
     pictureUrl
   } = loader;
 
@@ -27,7 +25,7 @@ const ToyDetails = () => {
   <div className="card-body">
     <h2 className="card-title">Toy Name: {toyName}</h2>
     <h3 className="text-xl font-semibold">Seller name: {name}</h3>
-    <h3 className="text-xl font-semibold">Seller email: {email}</h3>
+    <h3 className="text-xl font-semibold">Seller email: {postedBy}</h3>
     <h3 className="text-xl font-semibold">Price: ${price}</h3>
     <h3 className="text-xl font-semibold">Quantity: {quantity}</h3>
     <h3 className="text-xl font-semibold">Rating: {rating}</h3>

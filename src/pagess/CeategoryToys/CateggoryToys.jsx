@@ -1,9 +1,16 @@
 import Rating from "react-rating";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { toast } from "react-toastify";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
+
+
 const CategoryToys = ({ toys }) => {
   const {user} = useContext(AuthContext)
 
@@ -18,8 +25,19 @@ const CategoryToys = ({ toys }) => {
   }
 
 
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 800,
+      easing: 'ease-in-out',
+      delay: 200,
+    })
+  },[])
+
+
+
   return (
-    <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50 mx-auto text">
+    <div data-aos="zoom-in-up" className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50 mx-auto text">
       <img
         src={pictureUrl}
         alt=""

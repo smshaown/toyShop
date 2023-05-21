@@ -14,33 +14,28 @@ const ToyDetails = () => {
     subcategory,
     quantity,
     description,
+    email,
     pictureUrl
   } = loader;
 
   return (
-    <div>
-      <div className="hero min-h-screen bg-white mb-8">
-        <div className="hero-content flex-col lg:flex-row gap-12 ">
-          <img
-            src={pictureUrl}
-            className="max-w-sm rounded-lg shadow-2xl mt-[-70px]"
-          />
-          <div className="w-1/2 mt-20">
-            
-            <h1 className="text-3xl font-semibold">Toy Name: {toyName}</h1>
-            <h1 className="text-1xl font-normal">Name: {name}</h1>
-            <h1 className="text-1xl font-normal">Email: {postedBy}</h1>
-            <h2 className="text-1xl font-normal">Sub-category: {subcategory}</h2>
-            <h2 className="text-1xl font-normal">Price: {quantity}</h2>
-            <h2 className="text-1xl font-normal">Rating: {rating}</h2>
-            <h2 className="text-1xl font-normal">Quantity: ${quantity}</h2>
-            <p className="py-6">
-             {description}
-            </p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
-        </div>
-      </div>
+    <div> 
+
+
+      <div className="card card-side bg-base-100 shadow-xl w-[500px] mx-auto">
+     <figure><img src={pictureUrl} className="h-72" alt="Movie"/></figure>
+  <div className="card-body">
+    <h2 className="card-title">Toy Name: {toyName}</h2>
+    <h3 className="text-xl font-semibold">Seller name: {name}</h3>
+    <h3 className="text-xl font-semibold">Seller email: {email}</h3>
+    <h3 className="text-xl font-semibold">Price: ${price}</h3>
+    <h3 className="text-xl font-semibold">Quantity: {quantity}</h3>
+    <h3 className="text-xl font-semibold">Rating: {rating}</h3>
+    <p>Description: {description}</p>
+    
+    
+  </div> 
+</div>
     </div>
   );
 };

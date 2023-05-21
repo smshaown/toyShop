@@ -5,13 +5,13 @@ const SingleSubDetails = () => {
   const loader = useLoaderData();
   const {_id,  name, postedBy, subcategory, quantity, pictureUrl, rating, toyName, price} = loader;
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row ">
+    <div className="hero min-h-screen bg-base-200 mx-auto">
+      <div className="hero-content flex-col lg:flex-row">
         <img
           src={pictureUrl}
           className="max-w-sm rounded-lg w-full h-[350px]"
         />
-        <div className="">
+        <div className="w-1/2 ml-5">
           <h1 className="text-5xl font-bold">Box Office News!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
